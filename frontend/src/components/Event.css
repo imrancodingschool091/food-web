@@ -1,0 +1,160 @@
+/* Event.css */
+
+.event-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafb; /* Light background */
+}
+
+.event-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.event-header h1 {
+  font-size: 2.5rem;
+  color: #111; /* Darker text for better visibility */
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555; /* Slightly darker gray */
+  margin-bottom: 1.5rem;
+}
+
+.header-decoration {
+  width: 80px;
+  height: 4px;
+  background: #e63946; /* Red accent */
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.event-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image-container img {
+  transform: scale(1.05);
+}
+
+.event-price-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #e63946; /* Red background */
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.event-details {
+  padding: 1.5rem;
+}
+
+.event-details h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #111;
+}
+
+.event-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.event-info {
+  margin: 1.2rem 0;
+}
+
+.event-meta {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #e63946; /* Red icons */
+}
+
+.book-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.book-btn:hover {
+  background: #d62828; /* Darker red on hover */
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .event-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-page {
+    padding: 1rem;
+  }
+  
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}

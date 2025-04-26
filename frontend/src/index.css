@@ -1,0 +1,27 @@
+
+
+  /* index.css or App.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+
+
+  /* When navbar is visible */
+.main-page {
+  padding-top: 80px; /* Adjust this to match your actual navbar height if needed */
+}
+
+/* Dashboard layout has no navbar, so no padding */
+.dashboard-page {
+  padding-top: 0;
+}

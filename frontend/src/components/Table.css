@@ -1,0 +1,56 @@
+.image2{
+    height:400px ;
+    width:550px;
+    margin-top: 60px;
+    cursor: pointer;
+    
+
+}
+
+    .parent4 {
+        display: flex;
+        margin-left: 180px;
+    
+        
+    }
+    .container5 {
+        display: flex;
+    }
+    .form1 {
+
+        margin-top: 80px;
+        margin-left: 20px;
+        padding: 10px;
+        width: 200px;
+    }
+    
+    .form2 {
+    height: 150px;
+        margin-left: 20px;
+        width: 650px;
+        padding: 0px;
+    }
+    .form3{
+        margin-top: 30px;
+        margin-left: 20px;
+        padding: 10px;
+        width:200px
+
+    }
+    .button {
+        
+        margin-right: 250px;
+        margin-left: 250px;
+        height: 50px;
+        width: 150px;
+        font-size: 18px;
+        background-color: red;
+        border: none;
+        color: white;
+    border-radius: 20px;
+    }
+    
+    .button:hover {
+        cursor: pointer;
+        background-color:#333;
+    }

@@ -1,0 +1,36 @@
+.navbar{
+    position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+}
+.position{
+    position: relative;
+        }
+        .relativeheading{
+        font-size: 50px;
+        
+    }
+    .absolute{
+        position: absolute;
+        top:150px;
+        right:180px ;
+        bottom:90px ;
+        left:350px;
+      
+    }
+    body{
+  padding-top: 70px; 
+}
+
+.parent2 {
+    display: flex;
+    cursor: pointer;
+text-align: center;
+    justify-content: center;
+gap: 20px;}
+.image6{
+height:400px ;
+width: 500px;
+}
+

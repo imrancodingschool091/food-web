@@ -1,0 +1,32 @@
+.form-control1{
+    height:140px;
+    width: 500px;
+    border-color:0px; 
+  }
+  
+
+.form-control3{
+    height:50px ;
+    width:500px ;
+}
+.form-control2{
+    height:40px ;
+    width:250px;
+   }
+   .btn2{
+    background-color:red;
+    border: none;
+    color:white;
+    font-size: 16px;
+   border-radius: 20px;
+    margin-left: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  
+    
+    
+   }
+   .btn2:hover{
+   background-color:#d35400;}
