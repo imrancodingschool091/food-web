@@ -26,7 +26,7 @@ function Book() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/booking", form);
+      const response = await axios.post("https://food-web-wgol.onrender.com//api/booking", form);
       toast.success("Booking submitted successfully! 🎉", { position: "top-center" });
       console.log(response.data);
       // Optionally reset form after successful submit

@@ -11,7 +11,7 @@ function List() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/products");
+      const response = await axios.get("https://food-web-wgol.onrender.com//api/products");
       setProducts(response.data.data || []);
       setLoading(false);
     } catch (error) {
@@ -32,7 +32,7 @@ function List() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/products/${id}`);
+      await axios.delete(`https://food-web-wgol.onrender.com//api/products/${id}`);
       setProducts(products.filter(product => product._id !== id));
       toast.success("Product deleted successfully!", {
         position: "top-right",

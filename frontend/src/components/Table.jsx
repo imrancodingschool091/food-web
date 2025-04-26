@@ -24,7 +24,7 @@ function Table() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/book", form);
+      const response = await axios.post("https://food-web-wgol.onrender.com//api/book", form);
       alert("Booking submitted successfully!");
       console.log(response.data);
     } catch (error) {

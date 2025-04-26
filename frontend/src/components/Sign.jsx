@@ -52,7 +52,7 @@ function Sign() {
 
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/auth/register", {
+      const response = await axios.post("https://food-web-wgol.onrender.com//auth/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password

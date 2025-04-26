@@ -9,7 +9,7 @@ function Orders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/booking');
+        const response = await fetch('https://food-web-wgol.onrender.com//api/booking');
         if (!response.ok) {
           throw new Error('Failed to fetch orders');
         }
