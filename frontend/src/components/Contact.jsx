@@ -22,7 +22,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let response = await axios.post("https://food-web-wgol.onrender.com//api/contact", form);
+      let response = await axios.post("https://food-web-wgol.onrender.com/api/contact", form);
       toast.success("🎉 Thanks for reaching out! We'll get back to you shortly.", {
         position: "top-center",
         autoClose: 3000,

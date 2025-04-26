@@ -20,7 +20,7 @@ function Menu() {
   const fetchProduct = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://food-web-wgol.onrender.com//api/products');
+      const response = await axios.get('https://food-web-wgol.onrender.com/api/products');
       setMenu(response.data.data);
       setFilteredMenu(response.data.data);
     } catch (err) {

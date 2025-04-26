@@ -44,7 +44,7 @@ function ProductForm() {
 
     try {
       setLoading(true);
-      const res = await axios.post("https://food-web-wgol.onrender.com//api/products", formData);
+      const res = await axios.post("https://food-web-wgol.onrender.com/api/products", formData);
       setSuccessMsg("✅ Product added successfully!");
       setProductData({
         name: "",
