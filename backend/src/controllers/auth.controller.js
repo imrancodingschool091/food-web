@@ -83,3 +83,17 @@ export const Login = async (req, res) => {
     res.status(500).json({ message: "Server error", success: false, error });
   }
 };
+
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find(); // This includes hashed passwords
+    res.status(200).json({
+      message: "Users fetched successfully",
+      success: true,
+      users,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Server error", success: false, error });
+  }
+};
