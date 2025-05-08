@@ -97,3 +97,25 @@ export const getAllUsers = async (req, res) => {
     res.status(500).json({ message: "Server error", success: false, error });
   }
 };
+
+// DELETE USER BY ID
+export const deleteUser = async (req, res) => {
+  const userId = req.params.id;
+
+  try {
+    const deletedUser = await User.findByIdAndDelete(userId);
+
+    if (!deletedUser) {
+      return res.status(404).json({ message: "User not found", success: false });
+    }
+
+    res.status(200).json({
+      message: "User deleted successfully",
+      success: true,
+      user: deletedUser,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Server error", success: false, error });
+  }
+};
+

@@ -2,176 +2,184 @@
 .products-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: px;
-  }
+    
   
-  .products-container h1 {
+    height: 70vh; /* Fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.products-container h1 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
-  }
-  
-  /* Mobile View (Default) */
-  .mobile-view {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+/* Mobile View (Default) */
+.mobile-view {
     display: block;
-  }
-  
-  .product-card {
+}
+
+.product-card {
     background: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-  }
-  
-  .card-image-container {
+}
+
+.card-image-container {
     width: 100%;
-  }
-  
-  .card-image {
+}
+
+.card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  
-  .card-details {
+}
+
+.card-details {
     padding: 15px;
-  }
-  
-  .card-details h3 {
+}
+
+.card-details h3 {
     margin: 0 0 10px;
     color: #333;
     font-size: 1.2rem;
-  }
-  
-  .card-description {
+}
+
+.card-description {
     margin: 0 0 15px;
     color: #666;
     font-size: 0.9rem;
-  }
-  
-  .card-meta {
+}
+
+.card-meta {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-  }
-  
-  .price {
+}
+
+.price {
     font-weight: bold;
     color: #e63946;
-  }
-  
-  .category {
+}
+
+.category {
     background: #f1faee;
     padding: 3px 8px;
     border-radius: 4px;
     color: #457b9d;
     font-size: 0.8rem;
-  }
-  
-  .card-actions {
+}
+
+.card-actions {
     display: flex;
     gap: 10px;
-  }
-  
-  /* Desktop Table View */
-  .desktop-view {
+}
+
+/* Desktop Table View */
+.desktop-view {
     display: none;
-  }
-  
-  .products-table {
+}
+
+.products-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    margin-left: 90px;
+}
 
-  }
-  
-  .products-table th, .products-table td {
-    padding: 9px ;
+.products-table th, .products-table td {
+    padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    
-  }
-  
-  .products-table th {
+}
+
+.products-table th {
     background-color: #f8f9fa;
     font-weight: 600;
-  }
-  
-  .products-table tr:hover {
+    position: sticky;
+    top: 68px; /* Account for h1 sticky header */
+    z-index: 1;
+}
+
+.products-table tr:hover {
     background-color: #f5f5f5;
-  }
-  
-  .table-image {
+}
+
+.table-image {
     width: 80px;
     height: 50px;
     object-fit: cover;
     border-radius: 4px;
-  }
-  
-  .table-description {
+}
+
+.table-description {
     max-width: 300px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  .table-actions {
+}
+
+.table-actions {
     display: flex;
     gap: 8px;
-  }
-  
-  /* Buttons */
-  .edit-btn, .delete-btn {
+}
+
+/* Buttons */
+.edit-btn, .delete-btn {
     padding: 6px 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.2s;
-  }
-  
-  .edit-btn {
+}
+
+.edit-btn {
     background-color: #4CAF50;
     color: white;
-  }
-  
-  .edit-btn:hover {
+}
+
+.edit-btn:hover {
     background-color: #3e8e41;
-  }
-  
-  .delete-btn {
+}
+
+.delete-btn {
     background-color: #f44336;
     color: white;
-  }
-  
-  .delete-btn:hover {
+}
+
+.delete-btn:hover {
     background-color: #d32f2f;
-  }
-  
-  /* Responsive Breakpoint */
-  @media (min-width: 768px) {
+}
+
+/* Responsive Breakpoint */
+@media (min-width: 768px) {
     .mobile-view {
-      display: none;
+        display: none;
     }
     
     .desktop-view {
-      display: block;
+        display: block;
     }
-  }
-  
-  /* Utility Classes */
-  .loading, .error, .empty {
+}
+
+/* Utility Classes */
+.loading, .error, .empty {
     text-align: center;
     padding: 40px;
     font-size: 1.2rem;
-  }
-  
-  .error {
+}
+
+.error {
     color: #f44336;
-  }
-  
-  .empty {
+}
+
+.empty {
     color: #666;
-  }
+}

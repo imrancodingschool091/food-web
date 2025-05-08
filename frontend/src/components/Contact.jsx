@@ -83,7 +83,7 @@ function Contact() {
         {/* Contact Form Card */}
         <div className="card text-center shadow p-3 mb-5 bg-body rounded" style={{ width: 600, height: 500 }}>
           <div className="card-body">
-            <form className="row g-4 p-3" onSubmit={handleSubmit}>
+            <form className="row g-4 p-3" onSubmit={handleSubmit} >
               <div className="col-md-6">
                 <input type="text" className="form-control2" placeholder="Your Name" onChange={handleInput} value={form.name} name='name' />
               </div>

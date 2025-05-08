@@ -7,6 +7,8 @@ import Orders from './pages/Orders';
 import AddProducts from './pages/AddProducts';
 import List from './pages/List';
 import Login from './pages/Login';
+import Users from './pages/Users';
+import Contact from './pages/Contact';
 
 // Admin Layout Component
 const AdminLayout = () => (
@@ -46,6 +48,8 @@ function App() {
         <Route path="orders" element={<Orders />} />
         <Route path="add-products" element={<AddProducts />} />
         <Route path="list" element={<List />} />
+        <Route path="users" element={<Users />} />
+        <Route path="contacts" element={<Contact />} />
        
       </Route>
 

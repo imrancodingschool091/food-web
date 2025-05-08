@@ -6,10 +6,9 @@ import {
     FiList, 
     FiShoppingCart,
     FiArrowLeft,
-    
-    
-  } from 'react-icons/fi';
-
+    FiUser,
+} from 'react-icons/fi';
+import { MdContactPhone } from 'react-icons/md';  // Fixed import
 import "./Sidebar.css";
 
 function Sidebar() {
@@ -40,6 +39,15 @@ function Sidebar() {
         <Link to="/orders" className="sidebar-link">
           <FiShoppingCart className="sidebar-icon" />
           <span>Orders</span>
+        </Link>
+
+        <Link to="/users" className="sidebar-link">
+          <FiUser className="sidebar-icon" />
+          <span>Users</span>
+        </Link>
+        <Link to="/contacts" className="sidebar-link">
+          <MdContactPhone className="sidebar-icon" />
+          <span>contacts</span>
         </Link>
       
 

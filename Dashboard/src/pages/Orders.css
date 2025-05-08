@@ -1,124 +1,155 @@
-/* Orders.css - Table Version */
+/* Orders.css - Table Version with Fixed Height */
 
 .orders-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* Full viewport height */
+}
+
+.orders-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+  position: relative;
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.orders-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #d31027, #ea384d);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.loading, .error, .no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: #666;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: #d31027;
+}
+
+.table-wrapper {
+  height: 70vh; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Contain the table */
+}
+
+.table-responsive {
+  flex: 1;
+  overflow: auto; /* Enable scrolling */
+  position: relative;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.orders-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  color: #333;
+}
+
+.orders-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.orders-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .orders-container {
+      padding: 1rem;
+      height: auto;
+      min-height: 100vh;
   }
   
-  .orders-header {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-    font-size: 2rem;
-    position: relative;
-  }
-  
-  .orders-header::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #d31027, #ea384d);
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-  }
-  
-  .loading, .error, .no-orders {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 2rem;
-    color: #666;
-  }
-  
-  .error {
-    color: #d31027;
-  }
-  
-  .table-responsive {
-    overflow-x: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .orders-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
+  .table-wrapper {
+      height: 60vh; /* Slightly smaller on tablets */
   }
   
   .orders-table th,
   .orders-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .orders-table th {
-    background-color: #f8f8f8;
-    font-weight: 600;
-    color: #333;
-    position: sticky;
-    top: 0;
-  }
-  
-  .orders-table tr:hover {
-    background-color: #f9f9f9;
-  }
-  
-  .orders-table tr:last-child td {
-    border-bottom: none;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .orders-container {
-      padding: 1rem;
-    }
-    
-    .orders-table th,
-    .orders-table td {
       padding: 0.75rem 0.5rem;
       font-size: 0.9rem;
-    }
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-header {
+      font-size: 1.5rem;
   }
   
-  @media (max-width: 480px) {
-    .orders-header {
-      font-size: 1.5rem;
-    }
-    
-    .orders-table {
+  .table-wrapper {
+      height: 50vh; /* Smaller on mobile */
+  }
+  
+  .orders-table {
       display: block;
-    }
-    
-    .orders-table thead {
+  }
+  
+  .orders-table thead {
       display: none;
-    }
-    
-    .orders-table tr {
+  }
+  
+  .orders-table tr {
       display: block;
       margin-bottom: 1rem;
       border: 1px solid #eee;
       border-radius: 4px;
-    }
-    
-    .orders-table td {
+  }
+  
+  .orders-table td {
       display: flex;
       justify-content: space-between;
       padding: 0.5rem 1rem;
       border-bottom: 1px solid #f0f0f0;
-    }
-    
-    .orders-table td:before {
+  }
+  
+  .orders-table td:before {
       content: attr(data-label);
       font-weight: 600;
       color: #555;
       margin-right: 1rem;
-    }
-    
-    .orders-table td:last-child {
-      border-bottom: none;
-    }
   }
+  
+  .orders-table td:last-child {
+      border-bottom: none;
+  }
+}

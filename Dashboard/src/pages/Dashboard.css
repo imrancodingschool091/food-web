@@ -1,144 +1,134 @@
-/* Base Styles */
+/* Dashboard.css */
+
+.dashboard-heading {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .dashboard-container {
-    padding: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    min-height:100vh ;
-    width: 100%;
-  }
-  
-  /* Dashboard Card Styles */
-  .dashboard-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 auto;
-    width: 250px;
-    margin-right: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .dashboard-card:last-child {
-    margin-right: 0;
-  }
-  
-  .dashboard-card:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-  }
-  
-  /* Welcome Card */
-  .welcome-card {
-    margin-bottom: 2rem;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    color: white;
-    width: 100%;
-  }
-  
-  .dashboard-title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-  
-  .dashboard-subtitle {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  
-  /* Cards Row Layout */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h2 {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.top-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.category-tag {
+  background: #e0f7fa;
+  color: #00838f;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.chart-section, .table-section {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.chart-container {
+  height: 300px;
+  margin-top: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table th, 
+.products-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.products-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.products-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.loading {
+  color: #666;
+}
+
+.error {
+  color: #d31027;
+}
+
+@media (max-width: 768px) {
   .cards-row {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-    height: 250px;
+    grid-template-columns: 1fr 1fr;
   }
-  
-  /* Stat Cards */
-  .stat-card {
-    text-align: center;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .stat-card h2 {
-    font-size: 1.25rem;
-    color: #64748b;
-    margin-bottom: 1rem;
-    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .cards-row {
+    grid-template-columns: 1fr;
   }
   
   .stat-value {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Chart Section */
-  .chart-section {
-    background: white;
-    border-radius: 12px;
-    padding:8px ;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    margin: 1 rem;
-    height:380px;
-  }
-  
-  .section-title {
     font-size: 1.5rem;
-    color: #1e293b;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
   }
-  
-  .chart-container {
-    width: 100%;
-    height: 300px;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 1200px) {
-    .dashboard-card {
-      width: 220px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .dashboard-title {
-      font-size: 1.8rem;
-    }
-    
-    .section-title {
-      font-size: 1.3rem;
-    }
-  }
-  .dashboard-heading {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2c3e50;
-    padding: 10px 0;
-    border-bottom: 2px solid #e0e0e0;
-    cursor: pointer;
-    /* The inline margin: 20px will override any margin in the CSS */
-  }
-  
-  /* If you want to ensure the margin is always 20px, 
-     remove the inline style and use this instead: */
-  /*
-  .dashboard-heading {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin: 20px;
-    padding: 10px 0;
-    border-bottom: 2px solid #e0e0e0;
-  }
-  */
-  
+}

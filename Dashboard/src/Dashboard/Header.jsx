@@ -17,7 +17,7 @@ function Header() {
     <header className="header-container">
       <div className="header-content">
         <div className="logo">
-          <h1 className="logo-text">Logo</h1>
+          <h1 className="logo-text" style={{fontFamily:"sans-serif"}}>Foodie</h1>
         </div>
         <button 
           className="logout-button"
